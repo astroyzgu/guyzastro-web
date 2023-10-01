@@ -100,8 +100,9 @@ div.vertical {
 			url : url,
 			dataType : "html",
 			success : function(data) {
-
-				window.location= url;
+            			let nva = new Date().getTime() + 1_000
+           			window.location = url + "?nva="+nva
+				<!-- window.location= url; -->
 
 			},
 			error : function(xhr, ajaxOptions, thrownError) {
